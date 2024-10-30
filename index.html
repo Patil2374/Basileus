@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Agency</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFD700;
+            --dark-gray: #333;
+            --light-gray: #f0f0f0;
+        }
+        
+        body {
+            background: #fff;
+        }
+        .navbar {
+            background-color: var(--dark-gray) !important;
+            padding: 0.5rem 2rem;
+            border-radius: 25px;
+            margin: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        /* Services Section */
+        .services-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .services-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        
+            /* Workflow Section */
+    .workflow-section {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+    }
+    
+    .workflow-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .workflow-description {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .strategy-section {
+        padding: 20px 0;
+    }
+    
+    .strategy-image {
+        max-height: 300px;
+    }
+    
+    .strategy-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .strategy-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .strategy-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .strategy-list li:before {
+        content: "✓";
+        margin-right: 10px;
+        color: #333;
+    }
+
+    /* Team Section */
+    .team-section {
+        padding: 40px 0;
+        background-color: #fff;
+    }
+    
+    .team-header {
+        margin-bottom: 30px;
+    }
+    
+    .team-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .team-description {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    
+    .hands-section {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    
+    .hands-illustration {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .hands-illustration img {
+        max-width: 200px;
+    }
+    
+    .btn-branded {
+        background-color: #ffd700;
+        color: #333;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Clients Section */
+    .clients-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .clients-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .clients-description {
+        color: #666;
+        margin-bottom: 40px;
+    }
+    
+    .client-logos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    @media (max-width: 768px) {
+        .client-logos {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    .client-logo {
+        max-width: 100px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+    .stand-out-section {
+        background-color: var(--dark-gray);
+        color: white;
+        padding: 4rem 0;
+        margin-top: 4rem;
+    }
+
+    .info-card {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        color: var(--dark-gray);
+        height: 100%;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .plant-illustration {
+        margin-top: 2rem;
+    }
+
+    .footer-links {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        margin-top: 3rem;
+    }
+
+    .footer-links img {
+        height: 40px;
+    }
+
+    .cta-button {
+        background-color: var(--yellow);
+        color: var(--dark-gray);
+        padding: 0.75rem 2rem;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e6c200;
+        color: var(--dark-gray);
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="/api/placeholder/30/30" alt="BASILEUS">
+            BASILEUS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                <li class="nav-item"><a class="btn btn-primary ms-2" href="#">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>    
+    
+
+    <!-- Main content would go here -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">We Keep Your Brand Afloat</h1>
+                    <p class="lead mb-4">By Design & Strategy.</p>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="puzzle-illustration.png" alt="Brand Strategy" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p class="lead">We offer in-depth branding services for all types of business.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Brand Strategy -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="bulb-icon.png" alt="Brand Strategy" class="service-icon">
+                        <h3 class="h5 mb-3">Brand Strategy</h3>
+                        <p class="mb-0">Strategic solutions tailored to your brand's unique needs and goals.</p>
+                    </div>
+                </div>
+                
+                <!-- Visual Identity -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="pen-icon.png" alt="Visual Identity" class="service-icon">
+                        <h3 class="h5 mb-3">Visual Identity</h3>
+                        <p class="mb-0">Creating distinctive and memorable visual brand elements.</p>
+                    </div>
+                </div>
+                
+                <!-- Brand Guidelines -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="guidelines-icon.png" alt="Brand Guidelines" class="service-icon">
+                        <h3 class="h5 mb-3">Brand Guidelines</h3>
+                        <p class="mb-0">Comprehensive guides for consistent brand representation.</p>
+                    </div>
+                </div>
+                
+                <!-- Brand Assets -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="puzzle-icon.png" alt="Brand Assets" class="service-icon">
+                        <h3 class="h5 mb-3">Brand Assets</h3>
+                        <p class="mb-0">Custom-designed assets that enhance your brand identity.</p>
+                    </div>
+                </div>
+                
+                <!-- Digital Marketing -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="marketing-icon.png" alt="Digital Marketing" class="service-icon">
+                        <h3 class="h5 mb-3">Digital Marketing</h3>
+                        <p class="mb-0">Strategic digital campaigns to boost your brand presence.</p>
+                    </div>
+                </div>
+                
+                <!-- Brand Research -->
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="research-icon.png" alt="Brand Research" class="service-icon">
+                        <h3 class="h5 mb-3">Brand Research</h3>
+                        <p class="mb-0">In-depth market analysis and brand positioning research.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <button class="btn btn-primary">View More</button>
+            </div>
+        </div>
+    </section>
+    
+<!-- Workflow Section -->
+<section class="workflow-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="workflow-title">A Creative agency with an emphasis on excellence.</h2>
+                <p class="workflow-description">With a highly creative team of experts, passionate about crafting unique brand identities, and putting brands on a fruitful and sustainable journey.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="strategy-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="strategy-illustration.png" alt="Strategy" class="img-fluid strategy-image">
+            </div>
+            <div class="col-md-6">
+                <h3 class="strategy-title">We help you win by design and strategy</h3>
+                <ul class="strategy-list">
+                    <li>Design-led.</li>
+                    <li>Business User-friendly solutions.</li>
+                    <li>Strategy That works.</li>
+                </ul>
+                <button class="btn btn-dark px-4 mt-3">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="team-header">
+            <h2>Our team</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="team-title">The Excellent Team.</h3>
+                    <p class="team-description">At Spacious we have nothing short of an excellent approach to branding which sets the bar for a successful brand.</p>
+                    <button class="btn btn-dark px-4">See more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hands-section">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="hands-illustration">
+                        <img src="hands-illustration.png" alt="Team Collaboration" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h4>All hands are always on deck</h4>
+                    <p>At Spacious we always have all hands on deck to take your brand to the next level. Our commitment and teamwork fosters a sense of belonging and mutual respect. Through collaboration, communication, and mutual support we have built a system you can trust with your brand.</p>
+                    <button class="btn-branded">GET BRANDED</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="clients-section">
+    <div class="container">
+        <h2 class="clients-title">Sail with us</h2>
+        <p class="clients-description">You are in good company. Sail with industry leaders who trust us for exceptional service and results.</p>
+        
+        <div class="client-logos">
+            <!-- First row -->
+            <img src="client1.png" alt="Client Logo" class="client-logo">
+            <img src="client2.png" alt="Client Logo" class="client-logo">
+            <img src="client3.png" alt="Client Logo" class="client-logo">
+            <img src="client4.png" alt="Client Logo" class="client-logo">
+            <img src="client5.png" alt="Client Logo" class="client-logo">
+            <!-- Second row -->
+            <img src="client6.png" alt="Client Logo" class="client-logo">
+            <img src="client7.png" alt="Client Logo" class="client-logo">
+            <img src="client8.png" alt="Client Logo" class="client-logo">
+            <img src="client9.png" alt="Client Logo" class="client-logo">
+            <img src="client10.png" alt="Client Logo" class="client-logo">
+        </div>
+
+        <h3>We are committed to excellent customer experience.</h3>
+        <button class="btn btn-dark px-4 mt-3">Contact Us</button>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <section class="stand-out-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex flex-column">
+                        <h2 class="mb-4">Want to stand out?</h2>
+                        <a href="#" class="cta-button mb-4" style="width: fit-content;">Send us a message</a>
+                        <!-- Plant illustration -->
+                        <div class="plant-illustration">
+                            <img src="/api/placeholder/120/160" alt="Plant illustration" style="max-width: 120px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Our Address</h5>
+                                <p>Address: 123 Street Way<br>Village, State</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Email</h5>
+                                <p>info@basileus.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Contact</h5>
+                                <p>+1 234 567 8900</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Hours of operation</h5>
+                                <p>Monday - Saturday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer links -->
+            <div class="footer-links text-center mt-5">
+                <img src="images/Group 3430.png" alt="Basileus Logo" class="mb-3">
+                <div class="row justify-content-center mt-3">
+                    <div class="col-auto">
+                        <a href="#" class="text-white text-decoration-none mx-2">Services</a>
+                        <a href="about.html" class="text-white text-decoration-none mx-2">About Us</a>
+                        <a href="#" class="text-white text-decoration-none mx-2">Projects</a>
+                        <a href="contact.html" class="text-white text-decoration-none mx-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

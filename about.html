@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Basileus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFD700;
+            --dark-gray: #333;
+            --light-gray: #f0f0f0;
+        }
+        
+        body {
+            background: #fff;
+        }
+
+        .navbar {
+            background-color: var(--dark-gray) !important;
+            padding: 0.5rem 2rem;
+            border-radius: 25px;
+            margin: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .page-header {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .process-section {
+            margin: 4rem 0;
+        }
+
+        .process-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .process-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .process-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .stats-section {
+            margin: 4rem 0;
+        }
+
+        .stats-content {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stats-title {
+            flex: 1;
+        }
+
+        .stats-numbers {
+            flex: 1;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stand-out-section {
+    background-color: var(--dark-gray);
+    color: white;
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+
+.info-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: var(--dark-gray);
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-illustration {
+    margin-top: 2rem;
+}
+
+.footer-links {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-links img {
+    height: 40px;
+}
+
+.cta-button {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6c200;
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="/api/placeholder/30/30" alt="BASILEUS">
+                BASILEUS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-2" href="#">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>About Us</h1>
+        </div>
+
+        <!-- About Content -->
+        <div class="about-content">
+            <div class="about-text">
+                <p>BASILEUS is a creative branding agency that is growth-driven and purpose motivated seeking to help brands stand out from the sea of brands and businesses.</p>
+                <p>With a highly creative team of experts, passionate about providing innovative brand strategies and setting brands on a fruitful and profitable journey.</p>
+                <p>We have nothing short of an excellent approach to branding which sets the sail for a successful brand.</p>
+                <button class="btn btn-primary mt-3">See Projects</button>
+            </div>
+            <div class="about-image">
+                <img src="/api/placeholder/400/300" alt="Team illustration">
+            </div>
+        </div>
+
+        <!-- Process Section -->
+        <div class="process-section">
+            <h3 class="text-center mb-4">Our Process</h3>
+            <div class="process-cards">
+                <div class="process-card">
+                    <img src="/api/placeholder/50/50" alt="Research">
+                    <h5>Research</h5>
+                </div>
+                <div class="process-card">
+                    <img src="/api/placeholder/50/50" alt="Design">
+                    <h5>Design</h5>
+                </div>
+                <div class="process-card">
+                    <img src="/api/placeholder/50/50" alt="Launch">
+                    <h5>Launch</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stats-content">
+                <div class="stats-title">
+                    <h3>How brands are satisfied with our service?</h3>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-item">
+                        <div class="stat-number">176</div>
+                        <div>Projects done</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">36</div>
+                        <div>Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="stand-out-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column">
+                            <h2 class="mb-4">Want to stand out?</h2>
+                            <a href="#" class="cta-button mb-4" style="width: fit-content;">Send us a message</a>
+                            <!-- Plant illustration -->
+                            <div class="plant-illustration">
+                                <img src="/api/placeholder/120/160" alt="Plant illustration" style="max-width: 120px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Our Address</h5>
+                                    <p>Address: 123 Street Way<br>Village, State</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Email</h5>
+                                    <p>info@basileus.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Contact</h5>
+                                    <p>+1 234 567 8900</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h5>Hours of operation</h5>
+                                    <p>Monday - Saturday</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Footer links -->
+                <div class="footer-links text-center mt-5">
+                    <img src="images/Group 3430.png" alt="Basileus Logo" class="mb-3">
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-auto">
+                            <a href="#" class="text-white text-decoration-none mx-2">Services</a>
+                            <a href="about.html" class="text-white text-decoration-none mx-2">About Us</a>
+                            <a href="#" class="text-white text-decoration-none mx-2">Projects</a>
+                            <a href="contact.html" class="text-white text-decoration-none mx-2">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
